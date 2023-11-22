@@ -9,7 +9,7 @@ import {
 import React, { useState } from "react";
 import { CART } from "../data/cart";
 
-const CartScreen = () => {
+const CartScreen = ({navigation}) => {
     const [count, setCount] = useState(1);
     return (
         <SafeAreaView>
@@ -23,6 +23,7 @@ const CartScreen = () => {
                         alignItems: "center",
                         borderRadius: 9,
                     }}
+                    onPress={() => navigation.goBack()}
                 >
                     <Image source={require("../assets/Arrow1.png")} />
                 </TouchableOpacity>
@@ -106,7 +107,7 @@ const CartScreen = () => {
                     </Text>
                     <Text
                         style={{
-                            fontSize: " 18",
+                            fontSize: 18,
                             fontWeight: "700",
                             color: "#f08f5f",
                         }}

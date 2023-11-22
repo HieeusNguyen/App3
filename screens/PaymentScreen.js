@@ -12,7 +12,7 @@ import React from "react";
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
-const PaymentScreen = () => {
+const PaymentScreen = ({navigation}) => {
     return (
         <SafeAreaView>
             <View>
@@ -39,6 +39,7 @@ const PaymentScreen = () => {
                             justifyContent: "center",
                             alignItems: "center",
                         }}
+                        onPress={() => navigation.goBack()}
                     >
                         <Image
                             source={require("../assets/image/back-green.png")}
