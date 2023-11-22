@@ -6,6 +6,7 @@ import ScanScreen from "./screens/ScanScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import CartScreen from "./screens/CartScreen";
+import SuccessScreen from "./screens/SuccessScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -26,6 +27,7 @@ const MyTab = () => {
         >
             <Tab.Screen name="Home" component={HomeScreen} />
             <Tab.Screen name="Cart" component={CartScreen} />
+            
         </Tab.Navigator>
     );
 };
@@ -40,6 +42,7 @@ const SignedInStack = () => {
                 <Stack.Screen name="Home" component={HomeScreen} />
                 <Stack.Screen name="Scan" component={ScanScreen} />
                 <Stack.Screen name="Cart" component={CartScreen} />
+                <Stack.Screen name="SuccessScreen" component={SuccessScreen} />
                 <Stack.Screen name="MyTab" component={MyTab} />
             </Stack.Navigator>
             <StatusBar barStyle="dark-content" backgroundColor="#000" />

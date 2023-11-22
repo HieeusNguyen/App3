@@ -114,6 +114,7 @@ const HomeScreen = ({ navigation }) => {
                             paddingVertical: 50,
                             borderRadius: 16,
                         }}
+                        onPress={() => navigation.push("SuccessScreen")}
                     >
                         <View
                             style={{

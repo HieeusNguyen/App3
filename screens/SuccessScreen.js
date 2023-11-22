@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import React from "react";
 
-const SuccessScreen = () => {
+const SuccessScreen = ({navigation}) => {
     return (
         <SafeAreaView style={{ marginHorizontal: 20 }}>
             <TouchableOpacity
@@ -21,6 +21,7 @@ const SuccessScreen = () => {
                     justifyContent: "center",
                     alignItems: "center",
                 }}
+                onPress={() => navigation.goBack()}
             >
                 <Image source={require("../assets/image/back-purple.png")} />
             </TouchableOpacity>

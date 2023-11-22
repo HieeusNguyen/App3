@@ -5,7 +5,7 @@ import PaymentScreen from "./screens/PaymentScreen";
 import SuccessScreen from "./screens/SuccessScreen";
 
 function App() {
-  return <SuccessScreen />
+  return <SignedInStack />
 }
 
 export default App;
